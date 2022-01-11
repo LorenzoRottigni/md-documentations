@@ -1,4 +1,4 @@
-# VueCLI - 1 Installation, Structure, Components
+# VueCLI Installation, Structure, Components
 
 ## INSTALLATION
 

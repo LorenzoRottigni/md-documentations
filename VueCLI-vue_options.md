@@ -1,4 +1,4 @@
-#	VueCLI - 3 Vue Options
+# VueCLI - Vue Options
 
 You can reach variables, methods, computed and props using `this` clause.
 ##	DATA
