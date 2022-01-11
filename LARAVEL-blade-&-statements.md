@@ -149,3 +149,47 @@ Specify if an application is running in production/development, additionally you
 ```
 @include('shared.errors') //directory.file
 ```
+
+## BLADE LAYOUTS
+
+Define a default layout:
+
+```
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<!-- resources/views/layouts/default.blade.php -->
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<html>
+    <head>
+        <title>App Name - @yield('title')</title>
+    </head>
+    <body>
+        @section('sidebar')
+            This is the master sidebar.
+        @show
+        <div class="container">
+            <!-- yield gets replace with section "content" -->
+            @yield('content')
+        </div>
+    </body>
+</html>
+```
+
+Extend layout with sections:
+
+```
+<!-- resources/views/child.blade.php -->
+
+@extends('layouts.default')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+    @parent
+
+    <p>This is appended to the master sidebar.</p>
+@endsection
+
+@section('content')
+    <p>This is my body content.</p>
+@endsection
+```
