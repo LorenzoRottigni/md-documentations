@@ -50,5 +50,5 @@ sudo docker build -t <new-image-name> .
 sudo docker images
 ```
 
-###Remove image from images list (if not used by a running container):
+### Remove image from images list (if not used by a running container):
 `sudo docker images rm <image-name>`
