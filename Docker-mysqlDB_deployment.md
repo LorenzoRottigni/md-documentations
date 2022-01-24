@@ -31,3 +31,16 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyN3wP4ssw0rd';
 flush privileges;
 exit;
 ```
+
+## Adding PhpMyAdmin
+
+Download image:
+
+`docker pull phpmyadmin/phpmyadmin:latest`
+
+Start image on 8081 and link phpmyadmin container to mysql db container:
+
+`docker run --name phpmyadmin-container -d --link mysql-container:db -p 8081:80 phpmyadmin/phpmyadmin`
+
+
+
