@@ -1,6 +1,18 @@
 table_of_content:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
+  - CassandraDB-basics.md
+  - Docker-basics.md
+  - Docker-cassandraDB_deployment.md
+  - Docker-containers.md
+  - Docker-images.md
+  - docker images fix
+  - Docker-mysqlDB_deployment.md
+  - Docker-nuxt_deployment.md
+  - LARAVEL-blade_&_statements.md
+  - LARAVEL-installation_structure_MVC.md
+  - LARAVEL-migrations_&_seeders.md
+  - LARAVEL-model_controller.md
+  - LARAVEL-resouces_controller.md
+  - NodeJS-cassandra_driver.md
+  - VueCDN-installation_app.js_structure.md
+  - VueCLI-installation_structure_components.md
+  - VueCLI-vue_options.md
