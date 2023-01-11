@@ -4,7 +4,7 @@ table_of_content:
   - Docker-cassandraDB_deployment.md
   - Docker-containers.md
   - Docker-images.md
-  - docker images fix
+  - Docker-images.md
   - Docker-mysqlDB_deployment.md
   - Docker-nuxt_deployment.md
   - LARAVEL-blade_&_statements.md
