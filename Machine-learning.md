@@ -5,8 +5,13 @@
 - A big amount of data is used to "feed" the ML algoritmh, it uses the data to create and train the model that will interact with the final user.
 
 ## Algorithms
-### Linear regression
+### Regressor
+Type of algoritmh that will always return a numeric value
+#### Linear regression
 - returns a function that relates X and y where y must a number
+### Classifier
+Type of algoritmh that will return a category
+
 
 ## Metrics
 ### MAE - mean_absolute_error
@@ -28,4 +33,18 @@ The library the provides machine learning and data mining utils is named scikit-
 - Is used to name the variable that contains the x of the function "X" because it's a numeric matrix.
 - The output variable is simply named "Y"
 - Is used to name the algorithm class with the name of the ML algorithm and its istance as "model"
-- All ML algorithm classes expose 2 methods: fit() to train the model and predict() to ...
+- All ML algorithm classes expose 2 methods: fit() to train the model and predict() to make predictions on new incoming data.
+- ML Tranformers are used to expose 2 methods: fit() and tranform(). Also exists method fit_transform() that merges both methods.
+- It's use to name the X as the features of the dataset and the y as the target of the dataset
+
+## Obtain & Prepare big data
+In past it was used to manually prepare and convert inital dataset into numbers, now sklearn comes with a builtin feature "ColumnTransformer"
+able to prepare and transform the whole dataset.
+It loops on all dataset records and applies specified transformers/classifiers/vectorizers
+### Vectorization
+It consist in transforming non-numeric values i numbers in order to make ML algoritmh able to use it.
+#### One-Hot-Encoding
+### Filling missing values
+It consist in find a way to patch missing datasets needed for training the model.
+
+### Scaling
