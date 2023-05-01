@@ -13,7 +13,7 @@ Ref:
 - A big amount of data is used to "feed" the ML algoritmh, it uses the data to create and train the model that will interact with the final user.
 - Machine Learning figures out datasets into a Cartesian plane, the model is the function that tryes to intepolate (in case of regressor algoritmh) or split (in case of classifier algoritmh) all the points (drawn from dataset) on the plane.  
 
-## Algorithms
+## Learning Algorithms
 ### Regressor
 Type of algoritmh that will always return a numeric value
 #### Linear regression
