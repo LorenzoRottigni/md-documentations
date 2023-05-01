@@ -11,7 +11,9 @@ Type of algoritmh that will always return a numeric value
 - returns a function that relates X and y where y must a number
 ### Classifier
 Type of algoritmh that will return a category
-
+#### BernoulliNB
+Bernoulli Naive Bayes classifier is from years 80s and it was used for spam detection.
+It's based on probability and it's a supervised learning algorithm
 
 ## Metrics
 ### MAE - mean_absolute_error
@@ -44,6 +46,22 @@ It loops on all dataset records and applies specified transformers/classifiers/v
 ### Vectorization
 It consist in transforming non-numeric values i numbers in order to make ML algoritmh able to use it.
 #### One-Hot-Encoding
+Encodes categorical features as a one-hot numeric array. Useful to encode for example a column of sports such as "soccer" "rugby" "basket", ML algoritmhs work with numbers.
+#### Bag Of Words - Text Vectorization
+Algorithm of vectorization that allows to vectorize text by losing the order of the words.
+Each word of the text becomes a column(feature) of the matrix (text of 100.000 words becomes a 100.000 columns matrix),
+repeated words are merged into a single feature.
+```
+Bag of words:           | first | hello | world | again | new |
+first hello world =>    |  1    |  1    |  1    |  0    |  0  |
+hello world again =>    |  0    |  1    |  1    |  1    |  0  |
+new world hello =>      |  0    |  1    |  1    |  0    |  1  |
+```
+Each string is vectorized into a vector of 0 and 1, where 1 means that the word is present in the string.
+
+##### TFIDF (Term Frequency - Inverse Document Frequency)
+More complex algoritmh based on this that able to take control of the frequency of the words in the text.
+
 ### Filling missing values
 It consist in find a way to patch missing datasets needed for training the model.
 
