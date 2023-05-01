@@ -60,7 +60,7 @@ new world hello =>      |  0    |  1    |  1    |  0    |  1  |
 Each string is vectorized into a vector of 0 and 1, where 1 means that the word is present in the string.
 
 ##### TFIDF (Term Frequency - Inverse Document Frequency)
-More complex algoritmh based on this that able to take control of the frequency of the words in the text.
+More complex algoritmh based on this that is able to take control of the frequency of the words in the text.
 
 ### Filling missing values
 It consist in find a way to patch missing datasets needed for training the model.
