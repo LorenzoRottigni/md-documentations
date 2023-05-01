@@ -64,5 +64,8 @@ More complex algoritmh based on this that is able to take control of the frequen
 
 ### Filling missing values
 It consist in find a way to patch missing datasets needed for training the model.
-
+When working with big data it's common to have missing cells of the matrix and there are few ways to fix this problem:
+- If there are a few missing cells might be possible to find/generate fake values to fit them.
+- If a lot of cells are missing a possible choise is to drop the feature from the dataset.
+- It's possible using complex agoritmhs to learn and fit cells based on other cells values. It makes things harder and often isn't the best suitable option.
 ### Scaling
