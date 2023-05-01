@@ -87,6 +87,7 @@ Equalizing the differences between features improves the training performances b
 It's a trasformation algorimth that when is applied to the dataset makes sure that oscillation on the graph is equal on X and Y axis.
 - Before scaling transformation:
 <img src="https://storage.rottigni.tech/fs/github/images/ML/wines_after.png" alt="Lorenzo Rottigni" width="340" />
+
 - After scaling transformation:
 <img src="https://storage.rottigni.tech/fs/github/images/ML/wines_before.png" alt="Lorenzo Rottigni" width="340" />
 
