@@ -70,3 +70,16 @@ When working with big data it's common to have missing cells of the matrix and t
 - If a lot of cells are missing a possible choise is to drop the feature from the dataset.
 - It's possible using complex agoritmhs to learn and fit cells based on other cells values. It makes things harder and often isn't the best suitable option.
 ### Scaling
+In order to understand scaling concept it's necessary to draw the following diagram:
+```
+(y)
+|
+|                             
+|             .B
+|    .A                            .D
+|                     .C
+o ----------------------------------> (x)
+```
+The oscillation(offset between points) of X axis is much bigger respect the Y axis one and several ML algoritmhs focus on the bigger offset values (doesn't distribute the focus equally).
+Scaling consists in making sure that the variance differences between the features are cancelled. A neutral space is created allowing the algorithm to decide priorities by itself.
+Equalizing the differences between features improves the training performances because that algoritmh hasnt to equalize them.
