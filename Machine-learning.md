@@ -83,3 +83,6 @@ o ----------------------------------> (x)
 The oscillation(offset between points) of X axis is much bigger respect the Y axis one and several ML algoritmhs focus on the bigger offset values (doesn't distribute the focus equally).
 Scaling consists in making sure that the variance differences between the features are cancelled. A neutral space is created allowing the algorithm to decide priorities by itself.
 Equalizing the differences between features improves the training performances because that algoritmh hasnt to equalize them.
+#### MinMaxScaler
+It's a trasformation algorimth that when is applied to the dataset makes sure that oscillation on the graph is equal on X and Y axis.
+
