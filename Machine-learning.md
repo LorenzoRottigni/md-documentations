@@ -85,6 +85,8 @@ Scaling consists in making sure that the variance differences between the featur
 Equalizing the differences between features improves the training performances because that algoritmh hasnt to equalize them.
 #### MinMaxScaler
 It's a trasformation algorimth that when is applied to the dataset makes sure that oscillation on the graph is equal on X and Y axis.
-
-<img src="https://storage.rottigni.tech/fs/github/images/ML/wines_before.png" alt="Lorenzo Rottigni" width="340" />
+Before scaling transformation:
 <img src="https://storage.rottigni.tech/fs/github/images/ML/wines_after.png" alt="Lorenzo Rottigni" width="340" />
+After scaling transformation:
+<img src="https://storage.rottigni.tech/fs/github/images/ML/wines_before.png" alt="Lorenzo Rottigni" width="340" />
+
