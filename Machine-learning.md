@@ -1,10 +1,18 @@
 # MACHINE LEARNING
 
+Ref:
+- [ML basics, Linear Regression, MAE, Splitting](https://github.com/LorenzoRottigni/machine-learning-1) - DIABETS DATASET
+- [train_test_split, DecisionTreeClassifier, Accuracy Score Metric](https://github.com/LorenzoRottigni/machine-learning-2) - IRIS FLOWERS DATASET
+- [Text Vectorization, CountVectorizer](https://github.com/LorenzoRottigni/machine-learning-3) - HELLO WORLD DATASET
+- [Sentiment Analysis, CountVectorizer, train_test_split, BernoulliNB classifier, accuracy_score metric](https://github.com/LorenzoRottigni/ML-sentiment-analysis) - MOVIE REVIEWS DATASET
+- [Missing Values, ColumnTransformer, SimpleImputer, Pandas](https://github.com/LorenzoRottigni/machine-learning-5) - AGE/GENDER DATASET
+- [Scaling, MinMaxScaler transformer, Pandas](https://github.com/LorenzoRottigni/machine-learning-6) - WINES COMPOSITION DATASET
+
 ## Background explanations
 - In normal programming we have y = f(x) and the programmer given an input writes the algoritmh that calculates the output. In ML a big input of x and y is given and the function is generated from the ML model.
 - A big amount of data is used to "feed" the ML algoritmh, it uses the data to create and train the model that will interact with the final user.
 - Machine Learning figures out datasets into a Cartesian plane, the model is the function that tryes to intepolate (in case of regressor algoritmh) or split (in case of classifier algoritmh) all the points (drawn from dataset) on the plane.  
-- 
+
 ## Algorithms
 ### Regressor
 Type of algoritmh that will always return a numeric value
