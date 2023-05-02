@@ -33,6 +33,7 @@ What is inside the circle is model prediction, what is outside is real world sta
 #### PRECISION
 Precision is the difference between true predicted cases and total predicted cases
 #### RECALL
+Recall is the difference between the true predirected cases and the total true cases
 ### Algoritmhs
 #### MAE - mean_absolute_error
 Error measure that executes subtractions between predictions and and desired outputs.
