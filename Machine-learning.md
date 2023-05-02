@@ -24,6 +24,8 @@ Type of algoritmh that will return a category
 Bernoulli Naive Bayes classifier is from years 80s and it was used for spam detection.
 It's based on probability and it's a supervised learning algorithm
 
+# WORK IN PROGRESS ----------------------------------------
+https://www.youtube.com/watch?v=gwG_6ZwkM9E
 ## Metrics
 In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Indexes
@@ -34,6 +36,7 @@ What is inside the circle is model prediction, what is outside is real world sta
 Precision is the difference between the correctly predicted cases as true and the total between both true and false correctly predicted cases.
 #### RECALL
 Recall works with cases **correctly** predicted as **true** (A) and cases **wrongly** predicted as **false** (B):
+```
 R = A / (A + B)
 ```
 ### Algoritmhs
@@ -47,6 +50,7 @@ Combines precision and recall metrics into a single metric with the following ex
 ```
 F1 = 2 * (precision / recall) / (precision + recall)
 ```
+# EOF WORK IN PROGRESS -------------------------------------
 ### Confusion Matrix
 It is a graph to visualize the performances of the model: it takes on Y axis the expected target(y) and on the X axis the predictions(p) made.
 Squares splitted from the intersection between the expected output and the given output contain the count of correct and wrong predictions based on correct target output.
