@@ -31,6 +31,7 @@ In ML for metrics is meant a set of algoritmhs able to measure the performances 
 What is inside the circle is model prediction, what is outside is real world state.
 
 #### PRECISION
+Precision is the difference between true predicted cases and total predicted cases
 #### RECALL
 ### Algoritmhs
 #### MAE - mean_absolute_error
