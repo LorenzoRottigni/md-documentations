@@ -25,7 +25,7 @@ Bernoulli Naive Bayes classifier is from years 80s and it was used for spam dete
 It's based on probability and it's a supervised learning algorithm
 
 # WORK IN PROGRESS ----------------------------------------
-https://www.youtube.com/watch?v=gwG_6ZwkM9E
+https://www.youtube.com/watch?v=gwG_6ZwkM9E => 7:30 ALARM EXPLANATION
 ## Metrics
 In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Indexes
