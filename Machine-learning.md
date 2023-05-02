@@ -28,6 +28,7 @@ It's based on probability and it's a supervised learning algorithm
 In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Indexes
 <img src="https://storage.rottigni.tech/fs/github/images/ML/precision_recall.png" alt="Lorenzo Rottigni" width="340" />
+
 #### PRECISION
 #### RECALL
 ### Algoritmhs
