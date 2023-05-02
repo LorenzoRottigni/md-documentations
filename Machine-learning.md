@@ -25,12 +25,28 @@ Bernoulli Naive Bayes classifier is from years 80s and it was used for spam dete
 It's based on probability and it's a supervised learning algorithm
 
 ## Metrics
-### MAE - mean_absolute_error
+In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
+### Indexes
+<img src="https://storage.rottigni.tech/fs/github/images/ML/precision_recall.png" alt="Lorenzo Rottigni" width="340" />
+#### PRECISION
+#### RECALL
+### Algoritmhs
+#### MAE - mean_absolute_error
 Error measure that executes subtractions between predictions and and desired outputs.
 It takes for each calculated offset the absolute value (|x|, removes +/-) and then it calculates the average between all offsets.
 The more MAE is near 0 the more we're near the success.
 It's a good error measure because it keeps the measure unit of the input data.
-
+#### F1_score
+Combines precision and recall metrics into a single metric with the following expression:
+```
+F1 = 2 * (precision / recall) / (precision + recall)
+```
+### Confusion Matrix
+It is a graph to visualize the performances of the model: it takes on Y axis the expected target(y) and on the X axis the predictions(p) made.
+Squares splitted from the intersection between the expected output and the given output contain the count of correct and wrong predictions based on correct target output.
+It's named confusion matrix because it makes possible to understand for each expected output how many times the model returned a wrong or correct answer.
+Correct answers count are located in diagonal squares top-left to bottom-right of the chart.
+Thanks to this graph we're able to study specific solutions in data preparation, validation, or learning based on errors count results.
 ## Data validation
 It's important to subdivide the allocated big data taken as input in 2 parts in order to validate the model generated output.
 The first part that usually takes the 70/75% of the total is used for the training, the model will be generated based on this data.
