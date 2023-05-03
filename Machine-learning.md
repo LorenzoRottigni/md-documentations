@@ -24,9 +24,7 @@ Type of algoritmh that will return a category
 Bernoulli Naive Bayes classifier is from years 80s and it was used for spam detection.
 It's based on probability and it's a supervised learning algorithm
 
-## Metrics
-In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
-### Indexes
+## Indexes
 <img src="https://storage.rottigni.tech/fs/github/images/ML/precision_recall.png" alt="Lorenzo Rottigni" width="340" />
 
 What is inside the circle is model prediction, what is outside is real world state.
@@ -43,6 +41,8 @@ R = A / (A + B)
 ```
 It answers to the question "between true cases, how many time the model really predicted true?"
 
+## Metrics
+In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Algoritmhs
 #### MAE - mean_absolute_error
 Algorimth of misuration for regressors ML algoritmhs.
