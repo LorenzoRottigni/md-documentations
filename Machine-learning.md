@@ -24,23 +24,25 @@ Type of algoritmh that will return a category
 Bernoulli Naive Bayes classifier is from years 80s and it was used for spam detection.
 It's based on probability and it's a supervised learning algorithm
 
-## Indexes
+## Index parameters
 <img src="https://storage.rottigni.tech/fs/github/images/ML/precision_recall.png" alt="Lorenzo Rottigni" width="340" />
 
 What is inside the circle is model prediction, what is outside is real world state.
 Based on the problem we're trying to solve we have to evaluate if focus on precision or on recall, generally they are inversely proportional so precision increasement reflects on recall decreasement.
-#### PRECISION
+### PRECISION
 Precision is the difference between the **correctly** predicted cases as **true** and the total between both **wrongly** and **correctly** predicted **true** cases.
 It answers to the question "how many times the model predicted true and it was really true?"
 **EX.** When a high precision alarm goes off, it's sure the thief is present, but it's not sure it goes off every time there's a thief.
-#### RECALL
+### RECALL
 Recall works with cases **correctly** predicted as **true** (A) and cases **wrongly** predicted as **true** (B):
-**EX.** A high recall alarm goes off a lot of times but isn't sure that there's a thief
 ```
 R = A / (A + B)
 ```
+**EX.** A high recall alarm goes off a lot of times but isn't sure that there's a thief
 It answers to the question "between true cases, how many time the model really predicted true?"
-
+### OVERFITTING
+### UNDERFITTING
+<img src="https://storage.rottigni.tech/fs/github/images/ML/overfitting_underfitting.png" alt="Lorenzo Rottigni" width="340" />
 ## Metrics
 In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Algoritmhs
