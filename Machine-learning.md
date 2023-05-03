@@ -49,6 +49,10 @@ Error measure that executes subtractions between predictions and and desired out
 It takes for each calculated offset the absolute value (|x|, removes +/-) and then it calculates the average between all offsets.
 The more MAE is near 0 the more we're near the success.
 It's a good error measure because it keeps the measure unit of the input data.
+#### MSE - mean_squared_error
+Error measure that executes subtractions between predictions and and desired outputs.
+It takes for each calculated offset the squared absolute value (|x|, removes +/-) and then it calculates the average between all offsets.
+The more MAE is near 0 the more we're near the success.
 #### F1_score
 Combines precision and recall metrics into a single metric with the following expression:
 ```
