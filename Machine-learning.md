@@ -41,13 +41,15 @@ R = A / (A + B)
 **EX.** A high recall alarm goes off a lot of times but isn't sure that there's a thief
 It answers to the question "between true cases, how many time the model really predicted true?"
 
+
 <img src="https://storage.rottigni.tech/fs/github/images/ML/overfitting_underfitting.png" alt="Lorenzo Rottigni" width="340" />
+
 
 ### OVERFITTING
 It means that model perfectly predicts on training data but has bad performances on test data because it didnt catch entry relations.
 The model perfectly understood entry data but isn't able to generalize on new data.
 ### UNDERFITTING
-It means that the model isnt understanding well relations on training data and has bad error rate on both training and test data. 
+It means that the model isnt understanding well relations on training data and has bad error rate on both training and test data.
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/ml_fitting_flow.png" alt="Lorenzo Rottigni" width="400" />
 
