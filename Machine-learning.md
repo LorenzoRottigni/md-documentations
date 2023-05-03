@@ -25,7 +25,6 @@ Bernoulli Naive Bayes classifier is from years 80s and it was used for spam dete
 It's based on probability and it's a supervised learning algorithm
 
 # WORK IN PROGRESS ----------------------------------------
-https://www.youtube.com/watch?v=gwG_6ZwkM9E => 7:30 ALARM EXPLANATION
 ## Metrics
 In ML for metrics is meant a set of algoritmhs able to measure the performances of the model.
 ### Indexes
@@ -35,12 +34,15 @@ Based on the problem we're trying to solve we have to evaluate if focus on preci
 #### PRECISION
 Precision is the difference between the **correctly** predicted cases as **true** and the total between both **wrongly** and **correctly** predicted **true** cases.
 It answers to the question "how many times the model predicted true and it was really true?"
+**EX.** When a high precision alarm goes off, it's sure the thief is present, but it's not sure it goes off every time there's a thief.
 #### RECALL
 Recall works with cases **correctly** predicted as **true** (A) and cases **wrongly** predicted as **true** (B):
+**EX.** A high recall alarm goes off a lot of times but isn't sure that there's a thief
 ```
 R = A / (A + B)
 ```
 It answers to the question "between true cases, how many time the model really predicted true?"
+
 ### Algoritmhs
 #### MAE - mean_absolute_error
 Error measure that executes subtractions between predictions and and desired outputs.
