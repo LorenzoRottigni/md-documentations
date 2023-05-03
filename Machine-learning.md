@@ -31,14 +31,16 @@ In ML for metrics is meant a set of algoritmhs able to measure the performances 
 ### Indexes
 <img src="https://storage.rottigni.tech/fs/github/images/ML/precision_recall.png" alt="Lorenzo Rottigni" width="340" />
 What is inside the circle is model prediction, what is outside is real world state.
-
+Based on the problem we're trying to solve we have to evaluate if focus on precision or on recall, generally they are inversely proportional so precision increasement reflects on recall decreasement.
 #### PRECISION
-Precision is the difference between the correctly predicted cases as true and the total between both true and false correctly predicted cases.
+Precision is the difference between the **correctly** predicted cases as **true** and the total between both **wrongly** and **correctly** predicted **true** cases.
+It answers to the question "how many times the model predicted true and it was really true?"
 #### RECALL
-Recall works with cases **correctly** predicted as **true** (A) and cases **wrongly** predicted as **false** (B):
+Recall works with cases **correctly** predicted as **true** (A) and cases **wrongly** predicted as **true** (B):
 ```
 R = A / (A + B)
 ```
+It answers to the question "between true cases, how many time the model really predicted true?"
 ### Algoritmhs
 #### MAE - mean_absolute_error
 Error measure that executes subtractions between predictions and and desired outputs.
