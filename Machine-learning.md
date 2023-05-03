@@ -45,11 +45,13 @@ It answers to the question "between true cases, how many time the model really p
 
 ### Algoritmhs
 #### MAE - mean_absolute_error
+Algorimth of misuration for regressors ML algoritmhs.
 Error measure that executes subtractions between predictions and and desired outputs.
 It takes for each calculated offset the absolute value (|x|, removes +/-) and then it calculates the average between all offsets.
 The more MAE is near 0 the more we're near the success.
 It's a good error measure because it keeps the measure unit of the input data.
 #### MSE - mean_squared_error
+Algorimth of misuration for regressors ML algoritmhs.
 Error measure that executes subtractions between predictions and and desired outputs.
 It takes for each calculated offset the squared absolute value (|x|, removes +/-) and then it calculates the average between all offsets.
 The more MAE is near 0 the more we're near the success.
