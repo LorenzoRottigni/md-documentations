@@ -1,4 +1,4 @@
-# MACHINE LEARNING
+# MACHINE LEARNING COURSE - PIERO SAVASTANO
 
 Ref:
 - [ML-diabets](https://github.com/LorenzoRottigni/ML-diabets)
