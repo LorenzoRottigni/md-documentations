@@ -1,12 +1,16 @@
 # MACHINE LEARNING
 
 Ref:
-- [ML basics, Linear Regression, MAE, Splitting](https://github.com/LorenzoRottigni/machine-learning-1) - DIABETS DATASET
-- [train_test_split, DecisionTreeClassifier, Accuracy Score Metric](https://github.com/LorenzoRottigni/machine-learning-2) - IRIS FLOWERS DATASET
-- [Text Vectorization, CountVectorizer](https://github.com/LorenzoRottigni/machine-learning-3) - HELLO WORLD DATASET
-- [Sentiment Analysis, CountVectorizer, train_test_split, BernoulliNB classifier, accuracy_score metric](https://github.com/LorenzoRottigni/ML-sentiment-analysis) - MOVIE REVIEWS DATASET
-- [Missing Values, ColumnTransformer, SimpleImputer, Pandas](https://github.com/LorenzoRottigni/machine-learning-5) - AGE/GENDER DATASET
-- [Scaling, MinMaxScaler transformer, Pandas](https://github.com/LorenzoRottigni/machine-learning-6) - WINES COMPOSITION DATASET
+- [ML-diabets](https://github.com/LorenzoRottigni/ML-diabets)
+- [ML-iris](https://github.com/LorenzoRottigni/ML-iris)
+- [ML-text-vectorization](https://github.com/LorenzoRottigni/ML-text-vectorization)
+- [ML-sentiment-analysis](https://github.com/LorenzoRottigni/ML-sentiment-analysis)
+- [ML-missing-values](https://github.com/LorenzoRottigni/ML-missing-values)
+- [ML-wines](https://github.com/LorenzoRottigni/ML-wines)
+- [ML-random](https://github.com/LorenzoRottigni/ML-random)
+- [ML-seaborn](https://github.com/LorenzoRottigni/ML-seaborn)
+- [ML-deep-learning](https://github.com/LorenzoRottigni/ML-deep-learning)
+- [ML-bikes](https://github.com/LorenzoRottigni/ML-bikes)
 
 ## Background explanations
 - In normal programming we have y = f(x) and the programmer given an input writes the algoritmh that calculates the output. In ML a big input of x and y is given and the function is generated from the ML model.
