@@ -11,7 +11,7 @@ table_of_content:
   - laravel/laravel-migrations-seeders.md
   - laravel/laravel-mvc.md
   - laravel/laravel-model-controller.md
-  - laravel/resource-controller.md
+  - laravel/laravel-resource-controller.md
   - vue/vue-components.md
   - vue/vue-options.md
   - vue/vue-structure.md
