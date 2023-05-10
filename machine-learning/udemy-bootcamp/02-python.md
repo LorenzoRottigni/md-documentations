@@ -1,4 +1,4 @@
-# Machine Learning Udemy Bootcamp 01 - Python basics
+# Machine Learning Udemy Bootcamp 02 - Python basics
 
 ## String format
 ```
