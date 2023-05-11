@@ -1,4 +1,4 @@
-# Machine Learning Udemy Bootcamp 02 - Python basics
+# Machine Learning Udemy Bootcamp 03 - NumPy
 
 Numpy is a Linear Algebra Library for python.
 ```
