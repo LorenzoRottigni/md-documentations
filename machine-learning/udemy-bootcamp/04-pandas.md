@@ -341,3 +341,19 @@ df.groupby('Company').describe().transpose()
 # access signle company data
 df.groupby('Company').describe().transpose()['DB']
 ```
+
+### Merge, Join and Concatenate DataFrames
+```
+# concatenate dataframes with same columns and different indexes
+pd.concat([df1, df2, df3])
+# concatenate dataframes with same indexes and different columns
+pd.concat([df1, df2, df3], axis=1)
+
+# merge df1 with df2 usign key as foreign key, exactly like SQL join
+pd.merge(left=df1, right=df2, how='inner', on='key')
+# merge df1 with df2 using a compound key
+pd.merge(left=df1, right=df2, on=['key1', 'key2'])
+
+# join works as merge with the difference that the FK becomes the index instead of a column
+df1.join(df2)
+```
