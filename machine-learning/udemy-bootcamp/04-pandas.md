@@ -357,3 +357,122 @@ pd.merge(left=df1, right=df2, on=['key1', 'key2'])
 # join works as merge with the difference that the FK becomes the index instead of a column
 df1.join(df2)
 ```
+
+### DataFrame Operations
+```
+import pandas as pd
+
+df = pd.DataFrame({
+  'col1': [1, 2, 3, 4],
+  'col2': [444, 555, 666, 444],
+  'col3': ['abc', 'def', 'ghi', 'xyz']
+})
+
+# get unique values of a column
+df['col2'].unique() => [444, 555, 666]
+# get count of unique values of a column
+df['col2'].nunique() => [444, 555, 666]
+# get count of unique values of a column
+df['col2'].value_counts() => 444: 2, 555: 1, 666: 1
+
+# apply a function to a column
+df['col2'].sum() => 2109
+# apply a callback function to a column
+df['col2'].apply(lambda num: num * 2)
+
+df.drop('col1', axis=1) => drop column
+df.drop(0, axis=0) => drop row
+
+df.columns => get columns
+df.index => get indexes
+
+# sort dataframe rows ascending by column 2
+df.sort_values(by='col2') => sort by column
+
+# returns a boolean dataframe containing true where null value is found
+df.isnull()
+```
+
+#### Pivot Table
+```
+df = pd.DataFrame({
+  'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
+  'B': ['one', 'one', 'two', 'two', 'one', 'one'],
+  'C': ['x', 'y', 'x', 'y', 'x', 'y'],
+  'D': [1, 3, 2, 5, 4, 1]
+})
+
+df.pivot_table(
+  values='D',
+  index=['A', 'B'],
+  columns=['C']
+)
+"""
+C           x    y
+A   B
+bar one  4.0  1.0
+    two  NaN  5.0
+foo one  1.0  3.0
+    two  2.0  NaN
+"""
+```
+
+### Data Input and Output
+
+#### Dependencies
+```
+pip install sqlalchemy
+pip install lxml
+pip install html5lib
+pip install BeautifulSoup4
+
+#### CSV
+```
+df = pd.read_csv('example.csv')
+df.to_csv(
+  'example.csv',
+  # don't handle indexes as column
+  index=False
+)
+```
+
+#### Excel
+```
+# install xlrd for reading excel files
+conda install xlrd
+
+df = pd.read_excel(
+  # a set of sheets, each sheet is a dataframe
+  'Excel_Sample.xlsx',
+  # take Sheet1 as dataframe
+  sheet_name='Sheet1'
+)
+
+df.to_excel(
+  'Excel_Sample.xlsx',
+  # don't handle indexes as column
+  index=False,
+  sheet_name='NewSheet'
+)
+```
+
+#### HTML
+```
+# it makes its best but it's not perfect
+data = pd.read_html('http://www.fdic.gov/bank/individual/failed/banklist.html')
+
+type(data) => list
+```
+
+#### SQL
+It uses SQLAlchemy ORM to connect to different kinds of SQL databases.
+
+```
+from sqlalchemy import create_engine
+# DB connection handler 
+engine = create_engine('sqlite:///:memory:')
+# write dataframe to SQL using sqlalchemy orm
+df.to_sql('my_table', engine)
+# get back SQL table as dataframe
+sqldf = pd.read_sql('my_table', con=engine)
+```
