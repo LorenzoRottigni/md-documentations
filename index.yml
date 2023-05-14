@@ -21,3 +21,5 @@ table_of_content:
   - machine-learning/udemy-bootcamp/01-environment.md
   - machine-learning/udemy-bootcamp/02-python.md
   - machine-learning/udemy-bootcamp/03-numpy.md
+  - machine-learning/udemy-bootcamp/04-pandas.md
+  - machine-learning/udemy-bootcamp/05-matplotlib.md
