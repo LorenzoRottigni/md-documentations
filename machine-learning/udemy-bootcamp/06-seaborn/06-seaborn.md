@@ -11,6 +11,9 @@ pip install seaborn
 
 ## Distribution Plots
 Distribution plots allows to show the distribution of a univariate (one variable) set of observations.
+
+### DISTPLOT
+Distplot is a histogram with a line on it representing the distribution.
 ```
 import seaborn as sns
 
@@ -90,3 +93,119 @@ sns.kdeplot(
 ```
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-kdeplot.png" alt="SNS kdeplot" width="340" />
+
+## Categorical Plots
+
+### BARPLOT
+Barplot is a general plot that allows to aggregate categorical data based off some function, by default the mean.
+
+```
+sns.barplot(
+    # feature sex on X (categorical)
+    x='sex',
+    # feature total_bill on Y (numerical)
+    y='total_bill',
+    data=tips
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-barplot.png" alt="SNS kdeplot" width="340" />
+
+### COUNTPLOT
+Countplot is the same as barplot except the estimator is explicitly counting the number of occurrences.
+
+```
+sns.countplot(
+    # categorical feature
+    x='sex',
+    data=tips
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-countplot.png" alt="SNS kdeplot" width="340" />
+
+### BOXPLOT
+Boxplot shows the distribution of categorical data.
+It shows the quartiles of the dataset while the whiskers extend to show the rest of the distribution.
+Outliers are plotted as points outside the whiskers.
+
+```
+sns.boxplot(
+    # categorical feature
+    x='day',
+    # numerical feature
+    y='total_bill',
+    data=tips,
+    # categorical feature
+    hue='smoker'
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-boxplot.png" alt="SNS boxplot" width="340" />
+
+### VIOLINPLOT
+Violinplot plays a combination of boxplot and kdeplot.
+Allows to understand the relationship between two categorical features and a numerical feature.
+
+```
+sns.violinplot(
+    # categorical feature
+    x='day',
+    # numerical feature
+    y='total_bill',
+    data=tips,
+    hue='sex',
+    # split the violin plot by the hue feature
+    # instead of having a violin plot for each category of the hue feature
+    split=True
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-violinplot.png" alt="SNS violinplot" width="340" />
+
+### STRIPPLOT
+Stripplot draws a scatterplot where one variable is categorical.
+A strip plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution.
+
+```
+sns.stripplot(
+    # categorical feature
+    x='day',
+    # numerical feature
+    y='total_bill',
+    data=tips,
+    # adds a random noise to the data to avoid overlapping
+    jitter=True,
+    hue='sex'
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-stripplot.png" alt="SNS stripplot" width="340" />
+
+### SWARMPLOT
+Swarmplot is a combination of stripplot and violinplot, but the points are adjusted (only along the categorical axis) so that they don’t overlap.
+This gives a better representation of the distribution of values, although it does not scale as well to large numbers of observations (both in terms of the ability to show all the points and in terms of the computation needed to arrange them).
+
+```
+sns.swarmplot(
+    x='day',
+    y='total_bill',
+    data=tips,
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-swarmplot.png" alt="SNS swarmplot" width="340" />
+
+### FACTORPLOT
+Factorplot is the most general form of a categorical plot.
+It can take in a kind parameter to adjust the plot type.
+
+```
+sns.factorplot(
+    x='day',
+    y='total_bill',
+    data=tips,
+    # specify the kind of plot
+    kind='bar'
+)
+```
