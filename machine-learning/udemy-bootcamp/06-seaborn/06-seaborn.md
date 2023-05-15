@@ -31,6 +31,8 @@ sns.distplot(
 )
 ```
 
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-distplot" alt="SNS distplot" width="340" />
+
 ### JOINTPLOT
 Jointplot allows to match up two distplots for bivariate data (two variables).
 It creates a canvas where are related two distplots.
@@ -49,6 +51,7 @@ sns.jointplot(
     kind='scatter'
 )
 ```
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-jointplot" alt="SNS jointplot" width="340" />
 
 ### PAIRPLOT
 Pairplot allows to plot pairwise relationships across an entire dataframe (for the numerical columns) and supports a color hue argument (for categorical columns).
@@ -64,6 +67,8 @@ sns.pairplot(
 )
 ```
 
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-pairplot" alt="SNS pairplot" width="340" />
+
 ### RUGPLOT
 Rugplot draws a dash mark for every point on a univariate distribution.
 ```
@@ -72,11 +77,16 @@ sns.rugplot(
 )
 ```
 
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-rugplot" alt="SNS rugplot" width="340" />
+
 ### KDEPLOT
 KDEPlot represents the distribution of data in a KDE (Kernel Density Estimation) format.
 Normal distribution is mathematically represented by KDE.
+
 ```
 sns.kdeplot(
     tips['total_bill']
 )
 ```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-kdeplot" alt="SNS kdeplot" width="340" />
