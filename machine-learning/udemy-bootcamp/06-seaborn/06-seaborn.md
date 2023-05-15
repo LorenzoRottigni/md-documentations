@@ -209,3 +209,39 @@ sns.factorplot(
     kind='bar'
 )
 ```
+
+## Matrix Plots
+Matrix plots allow to plot data as color-encoded matrices and can also be used to indicate clusters within the data.
+To be a Marix it should have categorical features on both axes.
+
+### HEATMAP
+Heatmap is a simple way to plot a matrix plot.
+
+```
+sns.heatmap(
+    # dataset to plot
+    flights,
+    # annotates the heatmap with the numeric value
+    annot=True,
+    # cmap => colormap
+    cmap='coolwarm'
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-heatmap.png" alt="SNS heatmap" width="340" />
+
+### CLUSTERMAP
+Clustermap uses hierarchal clustering to produce a clustered version of the heatmap.
+It will show data aggregated as similar values, heatmap uses the provided order to show the data
+
+```
+sns.clustermap(
+    flights,
+    # standardize the scale
+    standard_scale=1
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-clustermap.png" alt="SNS clustermap" width="340" />
+
+
