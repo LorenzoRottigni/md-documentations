@@ -244,4 +244,70 @@ sns.clustermap(
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-clustermap.png" alt="SNS clustermap" width="340" />
 
+## Grids
+Grids are general types of plots that allow you to map plot types to rows and columns of a grid, this helps you create similar plots separated by features.
 
+### PAIRGRID
+Pairgrid is a subplot grid for plotting pairwise relationships in a dataset.
+It's how pairplot is implemented, it allows to create a grid of custom plots
+
+Scatterplot:
+```
+from matplotlib import pyplot as plt
+iris = sns.load_dataset('iris')
+g = sns.PairGrid(iris)
+# apply scatterplot to the grid
+g.map(plt.scatter)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-pairgrid-1.png" alt="SNS pairgrid scatterplot" width="340" />
+
+Multiplot:
+```
+g = sns.PairGrid(iris)
+# apply distplot to diagonal plots
+g.map_diag(sns.distplot)
+# apply scatterplot to the upper plots
+g.map_upper(plt.scatter)
+# apply kdeplot to the lower plots
+g.map_lower(sns.kdeplot)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-pairgrid-2.png" alt="SNS pairgrid multiplot" width="340" />
+
+
+### FACETGRID
+Facetgrid is the general way to create grids of plots based off of a feature.
+
+1 parameter distplot:
+```
+tips = sns.load_dataset('tips')
+g = sns.FacetGrid(
+    # data to use
+    data=tips,
+    # categorical feature to split the data
+    col='time',
+    # categorical feature to split the data
+    row='smoker'
+)
+# apply distplot to the grid using the feature total_bill
+g.map(sns.distplot, 'total_bill')
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-facetgrid-1.png" alt="SNS facetgrid distplot" width="340" />
+
+2 parameters scatterplot:
+```
+g = sns.FacetGrid(
+    # data to use
+    data=tips,
+    # categorical feature to split the data
+    col='time',
+    # categorical feature to split the data
+    row='smoker'
+)
+# apply distplot to the grid using the feature total_bill
+g.map(plt.scatter, 'total_bill', 'tip')
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-facetgrid-2.png" alt="SNS facetgrid scatterplot" width="340" />
