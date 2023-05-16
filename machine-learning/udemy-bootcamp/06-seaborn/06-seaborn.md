@@ -311,3 +311,37 @@ g.map(plt.scatter, 'total_bill', 'tip')
 ```
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-facetgrid-2.png" alt="SNS facetgrid scatterplot" width="340" />
+
+## Regression Plots
+Regression plots are plots that allow you to create a linear fit between two features.
+
+### LMPLOT
+```
+import seaborn as sns
+tips = sns.load_dataset('tips')
+# features separated by hue (color)
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    hue='sex',
+    markers=['o', 'v'],
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-1.png" alt="SNS lmplot 1" width="340" />
+
+Using different features:
+```
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    col='day',
+    row='time',
+    hue='sex',
+    aspect=0.6,
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-2.png" alt="SNS lmplot 2" width="340" />
