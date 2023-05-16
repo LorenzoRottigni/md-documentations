@@ -345,3 +345,46 @@ sns.lmplot(
 ```
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-2.png" alt="SNS lmplot 2" width="340" />
+
+## Styles
+Seaborn provides a variety of styles to customize the plots.
+
+```
+import matplotlib.pyplot as plt
+
+# overwrites the default seaborn styles
+sns.set_context(
+    # paper, notebook, talk, poster
+    'poster',
+    # font size of the labels
+    # font_scale=3
+)
+
+# Change the size of the splot using core matplotlib
+# It's possible to use matplotlib in combination with seaborn
+plt.figure(figsize=(12,3))
+
+sns.set_style(
+    # ticks at the edge of the plot
+    'ticks'
+    # 'darkgrid'
+    # 'whitegrid'
+)
+sns.countplot(x='sex',data=tips)
+# remove the top and right spines
+sns.despine(top=True, bottom=True)
+```
+
+Using plots parameters it's possible to customize the plots even more:
+
+```
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    # distribute colors based on a categorical feature
+    hue='sex',
+    # preset of palettes provided by colormap docs of matplotlib
+    palette='seismic'
+)
+```
