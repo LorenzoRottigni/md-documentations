@@ -347,7 +347,7 @@ sns.lmplot(
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-2.png" alt="SNS lmplot 2" width="340" />
 
 ## Styles
-Seaborn provides a variety of styles to customize the plots.
+Seaborn provides a variety of styles to customize the plots:
 
 ```
 import matplotlib.pyplot as plt
@@ -375,7 +375,7 @@ sns.countplot(x='sex',data=tips)
 sns.despine(top=True, bottom=True)
 ```
 
-Using plots parameters it's possible to customize the plots even more:
+Using plots parameters is possible to customize the plots even more:
 
 ```
 sns.lmplot(
