@@ -311,3 +311,80 @@ g.map(plt.scatter, 'total_bill', 'tip')
 ```
 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/sns-facetgrid-2.png" alt="SNS facetgrid scatterplot" width="340" />
+
+## Regression Plots
+Regression plots are plots that allow you to create a linear fit between two features.
+
+### LMPLOT
+```
+import seaborn as sns
+tips = sns.load_dataset('tips')
+# features separated by hue (color)
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    hue='sex',
+    markers=['o', 'v'],
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-1.png" alt="SNS lmplot 1" width="340" />
+
+Using different features:
+```
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    col='day',
+    row='time',
+    hue='sex',
+    aspect=0.6,
+)
+```
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/sns-lmplot-2.png" alt="SNS lmplot 2" width="340" />
+
+## Styles
+Seaborn provides a variety of styles to customize the plots:
+
+```
+import matplotlib.pyplot as plt
+
+# overwrites the default seaborn styles
+sns.set_context(
+    # paper, notebook, talk, poster
+    'poster',
+    # font size of the labels
+    # font_scale=3
+)
+
+# Change the size of the splot using core matplotlib
+# It's possible to use matplotlib in combination with seaborn
+plt.figure(figsize=(12,3))
+
+sns.set_style(
+    # ticks at the edge of the plot
+    'ticks'
+    # 'darkgrid'
+    # 'whitegrid'
+)
+sns.countplot(x='sex',data=tips)
+# remove the top and right spines
+sns.despine(top=True, bottom=True)
+```
+
+Using plots parameters is possible to customize the plots even more:
+
+```
+sns.lmplot(
+    x='total_bill',
+    y='tip',
+    data=tips,
+    # distribute colors based on a categorical feature
+    hue='sex',
+    # preset of palettes provided by colormap docs of matplotlib
+    palette='seismic'
+)
+```
