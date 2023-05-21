@@ -80,6 +80,7 @@ knn = KNeighborsClassifier(
 knn.fit(X_train, y_train)
 
 p = knn.predict(X_test)
+```
 
 ### Measure the Model
 
