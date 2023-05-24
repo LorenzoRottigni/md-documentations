@@ -9,7 +9,7 @@ It's possisble to expand this idea to non-linearly separable data by using the k
 <img src="https://storage.rottigni.tech/fs/github/images/ML/svm-scatterplot.jpeg" alt="support vector machines scatterplot" width="500"/>
 
 
-<img src="https://storage.rottigni.tech/fs/github/images/ML/svm-hyperplane.jpeg" alt="support vector machines scatterplot" width="500"/>
+<img src="https://storage.rottigni.tech/fs/github/images/ML/svm-hyperplane.png" alt="support vector machines scatterplot" width="500"/>
 
 
 ## Python Implementation
