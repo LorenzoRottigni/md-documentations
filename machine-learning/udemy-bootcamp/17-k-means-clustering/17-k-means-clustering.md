@@ -33,4 +33,4 @@ By plotting the K against the SSE it's possible to see that the error decreases 
 <img src="https://storage.rottigni.tech/fs/github/images/ML/elbow-method.png" alt="elbow method lineplot" width="500"/>
 
 It's named elbow method because the K value we're looking for is the one at which the SSE curve has an elbow, that is a sharp change in direction.
-
+Keep in mind that K means clustering is an unsupervised learning algorithm, so it's aim is to find patterns in the data. This means that it's not possible to use the SSE to choose the best K value, because the SSE will always decrease as K increases. The elbow method is just a way to choose a K value that is reasonable for the data.
