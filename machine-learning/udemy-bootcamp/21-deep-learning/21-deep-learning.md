@@ -46,7 +46,7 @@ A fully connected layer is a layer in which each neuron is connected to every ne
 In case of multiclass classification the output layer will have as many neurons as the number of classes. The output of each neuron will be the probability of the input to belong to that class.
 
 
-Hidden leayers are difficoult to interpret and understand because of their high interconnectivity. The weights of the hidden layers are not directly related to the input and output. The hidden layers are used to learn the features of the data.
+Hidden layers are difficoult to interpret and understand because of their high interconnectivity. The weights of the hidden layers are not directly related to the input and output. The hidden layers are used to learn the features of the data.
 
 
 - Neural networks become "deep neural networks" when they have more than one hidden layer.
@@ -58,9 +58,67 @@ The incredible thing about the neural network framework is that it can be used t
 Has been proven that a neural network with a single hidden layer can approximate any function. The number of neurons in the hidden layer is the only thing that changes.
 
 ## Activation Functions
+Considering the formula x*w + b where a weight and a bias are applied to entry x variable it's possible to say that w is the strength applied to x and the bias is the offset applied to x in order to reach a certain threshold.
+It's possible to say that the bias is assigned based on the weight of the input. If the weight is high the bias will be low and viceversa.
+
+
+Ex. if b=-10 and w=0.5 the threshold will be 20. If b=-10 and w=2 the threshold will be 5.
+
+
+For activation function is meant a function that is applied to the output of a neuron. The activation function is used to introduce non-linearity in the model.
+Changing the activation function means changing the shape of the output of the neuron.
+
+
+### Sigmoid Function
+The sigmoid function is a function that takes a real value as input and outputs another value between 0 and 1. The sigmoid function is used to convert a real value to a probability value.
+Considering a binary classification problem the output of the sigmoid function can be used to predict the probability of the input to belong to a certain class.
+By returning a number between 0 an 1 it provides a probability that the input belongs to a certain class.
+
+
+Sigmoid function has been used as activation function in the past but it's not used anymore because it has some problems:
+- The gradient of the sigmoid function is very small for very high and very low values. This means that the gradient descent will be very slow.
+- The output of the sigmoid function is not zero centered. This means that the gradient descent will be zig-zagging and it will be slower.
+- The output of the sigmoid function is not sparse. This means that the output will be always between 0 and 1.
+- The sigmoid function is computationally expensive.
+- The sigmoid function doesn't punish outliers.
+
+
+The sigmoid function is also known as logistic function and is defined as:
+
+
+f(z) = 1 / (1 + e^(-z))
+
+
+### Hyperbolic Tangent Function
+The hyperbolic tangent function is a really common option and takes a real value as input and outputs another value between -1 and 1. The hyperbolic tangent function is used to convert a real value to a probability value.
+Also existing the hyperbolin sin and the hyperbolic cosine functions but if preferred the hyperbolic tangent function because it's zero centered.
+The hyperbolic tangent function is defined as:
+
+
+f(z) = (e^z - e^(-z)) / (e^z + e^(-z))
+
+
+### Rectified Linear Unit Function
+The rectified linear unit function is a function that takes a real value as input and outputs another value between 0 and infinity. The rectified linear unit function is used to convert a real value to a probability value.
+
+
+It considers values smaller than 0 as 0 and values greater than 0 as they are.
+
+
+It has a lot of advantages:
+- It as good performance while dealing with the issue of vanishing gradient: the gradient is not zero for positive values.
+- It's computationally efficient.
+- It's sparse: the output is zero for negative values.
+
+
+The rectified linear unit function is defined as:
+
+
+f(z) = max(0, z)
 
 ## Cost Functions
 
 ## Feed Forward Neural Networks
 
 ## Backpropagation
+
