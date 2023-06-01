@@ -117,8 +117,45 @@ The rectified linear unit function is defined as:
 f(z) = max(0, z)
 
 ## Cost Functions
+Cost functions are functions that measure the performance of a model for given data. The cost function is used to estimate the parameters of the model.
+
+Const functions deals with N-dimensional vectors (tensors) that instead of using derivatives use gradients.
+The gradient is calculated in the following way:
+
+C(w) = (Delta<C(w1), C(w2), ..., C(wn)>)
+
+### Learning Rate
+The learning rate is a hyperparameter that controls how much to change the model in response to the estimated error each time the model weights are updated.
+The following plot represents the error of the model as a function of the learning rate. The learning rate is the x-axis and the error is the y-axis.
+The minimum value of the error is the optimal learning rate. If the learning rate is too small the model will take a lot of time to converge. If the learning rate is too big the model will never converge.
+It's also possible to use an adaptive gradient descent that changes the learning rate during the training process.
+
+#### Adam Optimizer
+Adam is an optimization algorithm published in 2015 that can be used instead of the classical stochastic gradient descent procedure to update network weights iterative based in training data.
+Adam is a much more efficient version of the gradient descent algorithm. Adam is an adaptive learning rate optimization algorithm that's been designed specifically for training deep neural networks.
+
+
+### Quadratic Cost Function
+The quadratic cost function is a very common function that takes the difference between the predicted value and the actual value and squares it. The quadratic cost function is used to measure the performance of a regression model.
+pros:
+- keeps everything positive
+- punishes outliers
+cons:
+- The quadratic cost function is not used for classification problems.
+  
+### Cross Entropy Cost Function
+The cross entropy cost function is a very common function that takes the difference between the predicted value and the actual value and squares it. The cross entropy cost function is used to measure the performance of a classification model.
+
+
+
+
+<img src="https://storage.rottigni.tech/fs/github/images/ML/DL-learning-rate.png" alt="Learning Rate" width="500"/>
+
 
 ## Feed Forward Neural Networks
 
 ## Backpropagation
 
+Backpropagation is an algorithm used to train neural networks, it gets back to the output of the network and propagates the error backward through the network in order to update the weights of the network.
+The main idea is that we can use the gradient to go back throught the network and adjust our weights and biases in order to minimize the output of the error vector on the last output layer.
+For gradient is meant the derivative when dealing with n-dimensions. The gradient is a vector that points in the direction of the greatest increase of a function. The gradient is used to find the minimum of a function.
